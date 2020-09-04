@@ -1,4 +1,10 @@
-print('Seja bem-vindo(a) a Loja de Peças do Thales')
+titulo = 'Seja bem-vindo(a) a Loja do '
+primeironome = 'Thales'
+segundonome = 'Renan'
+sobrenome = 'Miranda'
+ultimonome = 'Nakalski'
+nomecompleto = primeironome + ' ' + segundonome + ' ' + sobrenome + ' ' + ultimonome
+print(titulo + nomecompleto)
 print('Para análise de crédito digite:')
 cargo = input('Seu cargo: ')
 salario = input('Seu salário: ')
@@ -21,7 +27,8 @@ elif int(limite)*0.9 < int(valor) < int(limite):
 else:
     print('Bloqueado')
 
-if idade <= int(valor) <= 29:
-    print('Você tem direito a um desconto de R$6.00')
-    novovalor = int(valor)-6
+if idade < int(valor) < len(nomecompleto):
+    desconto = len(primeironome)
+    print(f'Você tem direito a um desconto de R${desconto}')
+    novovalor = int(valor) - desconto
     print(f'Valor do produto com desconto: R${novovalor}')
